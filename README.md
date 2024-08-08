@@ -1,5 +1,9 @@
 # README
 
+- Servicedesk je zamýšlen jako open-source ticketovací sysém pro méně náročné uživatele.
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
