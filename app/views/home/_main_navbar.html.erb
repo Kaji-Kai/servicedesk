@@ -1,0 +1,31 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid d-flex justify-content-between">
+
+    <!-- Left Content -->
+    <div class="d-flex col-3 align-items-center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="custom-opening-component"></div>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand p-3" href="../">Neri's Servicedesk</a>
+    </div>
+
+    <!-- Center Content -->
+    <div class="d-flex col-6 align-items-center">
+      <form class="d-flex justify-content-center flex-grow-1" role="search">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Content -->
+    <div class="d-flex col-3 justify-content-end align-items-evenly">
+      <% if user_signed_in? %>
+        <%= link_to "My profile", edit_user_registration_path, class: "btn btn-outline-info" %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-info ms-3" %>
+      <% end %>
+    </div>
+  </div>
+</nav>

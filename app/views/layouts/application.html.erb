@@ -13,9 +13,19 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render "home/main_navbar" %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    <% end %>
   </body>
+  <footer class="bg-light text-center text-lg-start">
+    <%= render "layouts/partials/footer" %>
+    <div class="text-center p-3">
+      ©2024 Tomas Nerad
+    </div>
+  </footer>
 </html>

@@ -1,0 +1,14 @@
+.custom-opening-component {
+    display: none; /* Hide the component initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw / 6); /* Approximately 1/6th of 16:9 */
+    height: 100vh; /* Spans the entire viewport height */
+    background-color: lightgray; /* Light gray background color */
+}
+
+.navbar-toggler.opened + .custom-opening-component {
+    display: block; /* Show the component when the toggler is clicked */
+    z-index: 99; /* Higher z-index when opened */
+}
